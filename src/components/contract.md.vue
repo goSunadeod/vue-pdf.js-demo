@@ -123,6 +123,7 @@
                 })
             },
             getPdf () {
+                // 此中方式接受流形式返回
                 this.$refs.mycanvas.scrollTop =0
 //                let accessToken = cache.get('TOKEN').Authorization
 //                let url = `${config.baseUrls}/api/fund/v1/contractReports/previewContractContent?access_token=${accessToken}&id=${contractData.id}&contractUrl=${contractData.contractUrl}&.pdf`
