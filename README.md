@@ -16,15 +16,6 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 # 页面
 官方demo：http://mozilla.github.io/pdf.js/web/viewer.html<br>
@@ -40,20 +31,20 @@ npm test
 2.3  let url = 'https://dluat.hscf.com/api/esm/v1/contractTemplates/load/c08def54aa40412b8b511406fc0271d2/0?access_token=b6cce0c8428c55531d206b4f008fe44e&name=cehsi.pdf'
 将上面的url放入浏览器直接 是以流的形式呈现出来，例如下面的乱码形式：<br>
 
-%PDF-1.4<br>
-5 0 obj<br>
-<<
-/Type /Page<br>
-/Parent 3 0 R<br>
-/Resources 4 0 R<br>
-/Contents 6 0 R<br>
-/MediaBox[ 0 0 595.3 841.9 ]<br>
-/CropBox[ 0 0 595.3 841.9 ]<br>
-/Rotate 0<br>
->>
-endobj<br>
-6 0 obj<br>
-<< /Length 273 /Filter /FlateDecode >><br>
+>%PDF-1.4<br>
+>5 0 obj<br>
+><<
+>/Type /Page<br>
+>/Parent 3 0 R<br>
+>/Resources 4 0 R<br>
+>/Contents 6 0 R<br>
+>/MediaBox[ 0 0 595.3 841.9 ]<br>
+>/CropBox[ 0 0 595.3 841.9 ]<br>
+>/Rotate 0<br>
+>>>
+>endobj<br>
+>6 0 obj<br>
+><< /Length 273 /Filter /FlateDecode >><br>
 .......还有很多这种码<br>
 这种带有参数的url必须编码，encodeURIComponent了解一下，当然以流的方式在浏览器打开是进行下载的，pdf.js也是可以进行预览，而不下载。<br>
 // 启动项目<br>
